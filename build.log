@@ -6,46 +6,46 @@ Sending build context to Docker daemon  3.144MB
 Step 1/25 : FROM judge0/compilers:3-6-2026 AS production
  ---> 6b8559f28d8e
 Step 2/25 : ENV JUDGE0_HOMEPAGE "https://judge0.com"
- ---> Running in 4d17369a00a6
- ---> Removed intermediate container 4d17369a00a6
- ---> a8c16912b90d
+ ---> Running in 769dbbc97f9f
+ ---> Removed intermediate container 769dbbc97f9f
+ ---> 9d6ce4d731be
 Step 3/25 : LABEL homepage=$JUDGE0_HOMEPAGE
- ---> Running in 0d19ffce5c14
- ---> Removed intermediate container 0d19ffce5c14
- ---> 887445d8fc1f
+ ---> Running in b4572be1b545
+ ---> Removed intermediate container b4572be1b545
+ ---> f0dce85424fc
 Step 4/25 : ENV JUDGE0_SOURCE_CODE "https://github.com/judge0/judge0"
- ---> Running in c13620af55db
- ---> Removed intermediate container c13620af55db
- ---> af75128d2462
+ ---> Running in 615b48b520d2
+ ---> Removed intermediate container 615b48b520d2
+ ---> eed56e38eb3a
 Step 5/25 : LABEL source_code=$JUDGE0_SOURCE_CODE
- ---> Running in 6f3dc908ba30
- ---> Removed intermediate container 6f3dc908ba30
- ---> 1f1c64917eef
+ ---> Running in c6137c964bcf
+ ---> Removed intermediate container c6137c964bcf
+ ---> a0e063f35844
 Step 6/25 : ENV JUDGE0_MAINTAINER "Herman Zvonimir Došilović <hermanz.dosilovic@gmail.com>"
- ---> Running in 8acd1f7bd961
- ---> Removed intermediate container 8acd1f7bd961
- ---> 891174b8d54a
+ ---> Running in be6de8d86a97
+ ---> Removed intermediate container be6de8d86a97
+ ---> ce1501f3bde2
 Step 7/25 : LABEL maintainer=$JUDGE0_MAINTAINER
- ---> Running in 5d6eb7287ae9
- ---> Removed intermediate container 5d6eb7287ae9
- ---> b78cfff74d53
+ ---> Running in 76d50f86f5ad
+ ---> Removed intermediate container 76d50f86f5ad
+ ---> 34b1b57d6a88
 Step 8/25 : ENV PATH "/usr/local/ruby-3.3.8/bin:/opt/.gem/bin:$PATH"
- ---> Running in e65930a11d4d
- ---> Removed intermediate container e65930a11d4d
- ---> 830c6e78f5a1
+ ---> Running in 0dd8a7d8fe07
+ ---> Removed intermediate container 0dd8a7d8fe07
+ ---> b0998cf68a1f
 Step 9/25 : ENV GEM_HOME "/opt/.gem/"
- ---> Running in 99b72669c693
- ---> Removed intermediate container 99b72669c693
- ---> 0beccc6c67d8
-Step 10/25 : RUN apt-get update &&     apt-get install -y --no-install-recommends       cron       libpq-dev       sudo       nodejs       npm &&     rm -rf /var/lib/apt/lists/* &&     echo "gem: --no-document" > /root/.gemrc &&     gem install bundler:2.1.4 &&     npm install -g --unsafe-perm aglio@2.3.0
- ---> Running in 16a88d59e9af
+ ---> Running in cc3f7eba7273
+ ---> Removed intermediate container cc3f7eba7273
+ ---> faf3b3193dad
+Step 10/25 : RUN apt-get update &&     apt-get install -y --no-install-recommends       cron       libpq-dev       sudo       nodejs       npm &&     echo "gem: --no-document" > /root/.gemrc &&     gem install bundler:2.1.4 &&     npm install -g --unsafe-perm aglio@2.3.0 &&     rm -rf /var/lib/apt/lists/*
+ ---> Running in 48837be0e214
 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
 Get:4 http://deb.debian.org/debian trixie/main arm64 Packages [9,608 kB]
 Get:5 http://deb.debian.org/debian trixie-updates/main arm64 Packages [5,404 B]
 Get:6 http://deb.debian.org/debian-security trixie-security/main arm64 Packages [208 kB]
-Fetched 10.1 MB in 4s (2,303 kB/s)
+Fetched 10.1 MB in 5s (2,233 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -625,7 +625,7 @@ debconf: falling back to frontend: Teletype
 [0m[91mdebconf: unable to initialize frontend: Teletype
 debconf: (This frontend requires a controlling tty.)
 debconf: falling back to frontend: Noninteractive
-[0mFetched 32.0 MB in 25s (1,289 kB/s)
+[0mFetched 32.0 MB in 16s (2,049 kB/s)
 Selecting previously unselected package libsystemd-shared:arm64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 41591 files and directories currently installed.)
 Preparing to unpack .../libsystemd-shared_257.13-1~deb13u1_arm64.deb ...
@@ -2123,45 +2123,45 @@ sysctl: permission denied on key "kernel.pid_max"
 Successfully installed bundler-2.1.4
 1 gem installed
 [91mnpm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
-[0m[91mnpm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+[0m[91mnpm WARN[0m[91m deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
 [0m[91mnpm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
 [0m[91mnpm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
-[0m[91mnpm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
-[0m[91mnpm WARN deprecated glob@3.2.11: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 [0m[91mnpm WARN deprecated json3@3.3.2: Please use the native JSON object instead of JSON 3
+[0m[91mnpm WARN deprecated glob@3.2.11: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+[0m[91mnpm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
 [0m[91mnpm WARN deprecated cryptiles@2.0.5: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
 [0m[91mnpm WARN [0m[91mdeprecated sntp@1.0.9: This module moved to @hapi/sntp. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critical security issues.
 [0m[91mnpm WARN deprecated boom@2.10.1: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-[0m[91mnpm WARN deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
 [0m[91mnpm WARN deprecated hoek@2.16.3: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
+[0m[91mnpm WARN deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
 [0m[91mnpm WARN deprecated har-validator@4.2.1: this library is no longer supported
 [0m[91mnpm WARN deprecated hawk@3.1.3: This module moved to @hapi/hawk. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critical security issues.
 [0m[91mnpm WARN deprecated request@2.81.0: request has been deprecated, see https://github.com/request/request/issues/3142
 [0m[91mnpm WARN deprecated transformers@2.1.0: Deprecated, use jstransformer
 [0m[91mnpm WARN deprecated constantinople@3.0.2: Please update to at least constantinople 3.1.1
-[0m[91mnpm WARN deprecated mkdirp@0.3.5: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
 [0m[91mnpm WARN deprecated coffee-script@1.12.7: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
-[0m[91mnpm WARN deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+[0m[91mnpm WARN deprecated mkdirp@0.3.5: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
 [0m[91mnpm WARN deprecated highlight.js@8.9.1: Version no longer supported. Upgrade to @latest
+[0m[91mnpm WARN deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
 [0m
-added 431 packages in 1m
+added 431 packages in 58s
 
 15 packages are looking for funding
   run `npm fund` for details
- ---> Removed intermediate container 16a88d59e9af
- ---> 7b0b47ecca35
+ ---> Removed intermediate container 48837be0e214
+ ---> 989369d0e647
 Step 11/25 : EXPOSE 2358
- ---> Running in 5240a28a1038
- ---> Removed intermediate container 5240a28a1038
- ---> 21ae861fa74b
+ ---> Running in 13656c541509
+ ---> Removed intermediate container 13656c541509
+ ---> 6b1360db3c69
 Step 12/25 : WORKDIR /api
- ---> Running in 1026b6c9bdda
- ---> Removed intermediate container 1026b6c9bdda
- ---> a63a709911dd
+ ---> Running in 16af3129331a
+ ---> Removed intermediate container 16af3129331a
+ ---> f775b63d02ba
 Step 13/25 : COPY Gemfile* ./
- ---> d27ffb74dd6c
+ ---> c753e0ba8408
 Step 14/25 : RUN RAILS_ENV=production bundle
- ---> Running in 0dda9a15d1f7
+ ---> Running in edcf4bccbf32
 [91mCalling `DidYouMean::SPELL_CHECKERS.merge!(error_name => spell_checker)' has been deprecated. Please call `DidYouMean.correct_error(error_name, spell_checker)' instead.
 [0m[91mDon't run Bundler as root. Bundler can ask for sudo if it is needed, and
 installing your bundle as root will break this application for all non-root
@@ -2173,8 +2173,6 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
@@ -2197,48 +2195,6 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
@@ -2251,35 +2207,19 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
@@ -2303,13 +2243,9 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
@@ -2347,6 +2283,30 @@ NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
@@ -2359,6 +2319,44 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
@@ -2393,6 +2391,209 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mnokogiri-1.14.5-aarch64-linux requires ruby version < 3.3.dev, >= 2.7, which is
-incompatible with the current version, ruby 3.3.8p144
-[0mThe command '/bin/sh -c RAILS_ENV=production bundle' returned a non-zero code: 5
+[0mUsing rake 13.1.0
+Fetching concurrent-ruby 1.2.3
+Installing concurrent-ruby 1.2.3
+Fetching i18n 1.14.1
+Installing i18n 1.14.1
+Fetching minitest 5.22.2
+Installing minitest 5.22.2
+Fetching tzinfo 2.0.6
+Installing tzinfo 2.0.6
+Fetching zeitwerk 2.6.13
+Installing zeitwerk 2.6.13
+Fetching activesupport 6.1.7.7
+Installing activesupport 6.1.7.7
+Fetching builder 3.2.4
+Installing builder 3.2.4
+Fetching erubi 1.12.0
+Installing erubi 1.12.0
+Fetching mini_portile2 2.8.9
+Installing mini_portile2 2.8.9
+Fetching racc 1.8.1
+Installing racc 1.8.1 with native extensions
+Fetching nokogiri 1.19.3 (aarch64-linux-gnu)
+Installing nokogiri 1.19.3 (aarch64-linux-gnu)
+Fetching rails-dom-testing 2.2.0
+Installing rails-dom-testing 2.2.0
+Fetching crass 1.0.6
+Installing crass 1.0.6
+Fetching loofah 2.22.0
+Installing loofah 2.22.0
+Fetching rails-html-sanitizer 1.6.0
+Installing rails-html-sanitizer 1.6.0
+Fetching actionview 6.1.7.7
+Installing actionview 6.1.7.7
+Fetching rack 2.2.8.1
+Installing rack 2.2.8.1
+Fetching rack-test 2.1.0
+Installing rack-test 2.1.0
+Fetching actionpack 6.1.7.7
+Installing actionpack 6.1.7.7
+Fetching nio4r 2.7.0
+Installing nio4r 2.7.0 with native extensions
+Fetching websocket-extensions 0.1.5
+Installing websocket-extensions 0.1.5
+Fetching websocket-driver 0.7.6
+Installing websocket-driver 0.7.6 with native extensions
+Fetching actioncable 6.1.7.7
+Installing actioncable 6.1.7.7
+Fetching globalid 1.2.1
+Installing globalid 1.2.1
+Fetching activejob 6.1.7.7
+Installing activejob 6.1.7.7
+Fetching activemodel 6.1.7.7
+Installing activemodel 6.1.7.7
+Fetching activerecord 6.1.7.7
+Installing activerecord 6.1.7.7
+Fetching marcel 1.0.2
+Installing marcel 1.0.2
+Fetching mini_mime 1.1.5
+Installing mini_mime 1.1.5
+Fetching activestorage 6.1.7.7
+Installing activestorage 6.1.7.7
+Using date 3.3.4
+Using timeout 0.4.1
+Using net-protocol 0.2.2
+Fetching net-imap 0.3.7
+Installing net-imap 0.3.7
+Using net-pop 0.1.2
+Fetching net-smtp 0.4.0.1
+Installing net-smtp 0.4.0.1
+Fetching mail 2.8.1
+Installing mail 2.8.1
+Fetching actionmailbox 6.1.7.7
+Installing actionmailbox 6.1.7.7
+Fetching actionmailer 6.1.7.7
+Installing actionmailer 6.1.7.7
+Fetching actiontext 6.1.7.7
+Installing actiontext 6.1.7.7
+Fetching case_transform 0.2
+Installing case_transform 0.2
+Fetching jsonapi-renderer 0.2.2
+Installing jsonapi-renderer 0.2.2
+Fetching active_model_serializers 0.10.13
+Installing active_model_serializers 0.10.13
+Fetching annotate 3.2.0
+Installing annotate 3.2.0
+Using bundler 2.1.4
+Fetching byebug 11.1.3
+Installing byebug 11.1.3 with native extensions
+Fetching coderay 1.1.3
+Installing coderay 1.1.3
+Fetching enumerations 2.5.3
+Installing enumerations 2.5.3
+Fetching et-orbi 1.2.7
+Installing et-orbi 1.2.7
+Fetching ffi 1.15.5
+Installing ffi 1.15.5 with native extensions
+Fetching raabro 1.4.0
+Installing raabro 1.4.0
+Fetching fugit 1.9.0
+Installing fugit 1.9.0
+Fetching multi_xml 0.6.0
+Installing multi_xml 0.6.0
+Fetching httparty 0.21.0
+Installing httparty 0.21.0
+Fetching rb-fsevent 0.11.1
+Installing rb-fsevent 0.11.1
+Fetching rb-inotify 0.10.1
+Installing rb-inotify 0.10.1
+Fetching listen 3.7.1
+Installing listen 3.7.1
+Fetching method_source 1.0.0
+Installing method_source 1.0.0
+Fetching mono_logger 1.1.2
+Installing mono_logger 1.1.2
+Fetching multi_json 1.15.0
+Installing multi_json 1.15.0
+Using ruby2_keywords 0.0.5
+Fetching mustermann 3.0.0
+Installing mustermann 3.0.0
+Fetching pg 1.3.5
+Installing pg 1.3.5 with native extensions
+Fetching pry 0.13.1
+Installing pry 0.13.1
+Fetching pry-byebug 3.9.0
+Installing pry-byebug 3.9.0
+Fetching pry-rails 0.3.9
+Installing pry-rails 0.3.9
+Fetching puma 5.6.8
+Installing puma 5.6.8 with native extensions
+Fetching rack-cors 1.1.1
+Installing rack-cors 1.1.1
+Fetching rack-protection 3.1.0
+Installing rack-protection 3.1.0
+Fetching thor 1.3.1
+Installing thor 1.3.1
+Fetching railties 6.1.7.7
+Installing railties 6.1.7.7
+Fetching sprockets 4.2.1
+Installing sprockets 4.2.1
+Fetching sprockets-rails 3.4.2
+Installing sprockets-rails 3.4.2
+Fetching rails 6.1.7.7
+Installing rails 6.1.7.7
+Fetching redis 4.5.1
+Installing redis 4.5.1
+Fetching redis-namespace 1.11.0
+Installing redis-namespace 1.11.0
+Fetching tilt 2.3.0
+Installing tilt 2.3.0
+Fetching sinatra 3.1.0
+Installing sinatra 3.1.0
+Fetching resque 2.6.0
+Installing resque 2.6.0
+Fetching rufus-scheduler 3.9.1
+Installing rufus-scheduler 3.9.1
+Fetching resque-scheduler 4.10.2
+Installing resque-scheduler 4.10.2
+Fetching will_paginate 3.3.1
+Installing will_paginate 3.3.1
+Bundle complete! 15 Gemfile dependencies, 83 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+Post-install message from httparty:
+When you HTTParty, you must party hard!
+ ---> Removed intermediate container edcf4bccbf32
+ ---> 8dbdff9210d5
+Step 15/25 : COPY cron /etc/cron.d
+ ---> 8734030248c9
+Step 16/25 : RUN cat /etc/cron.d/* | crontab -
+ ---> Running in a8c18d7eeacc
+ ---> Removed intermediate container a8c18d7eeacc
+ ---> 4c31d876c84a
+Step 17/25 : COPY . .
+ ---> 260abdb84650
+Step 18/25 : ENTRYPOINT ["/api/docker-entrypoint.sh"]
+ ---> Running in 509e3d4a27ed
+ ---> Removed intermediate container 509e3d4a27ed
+ ---> 2f7c09f90de5
+Step 19/25 : CMD ["/api/scripts/server"]
+ ---> Running in ccf9bb0bed17
+ ---> Removed intermediate container ccf9bb0bed17
+ ---> ef33a9797f28
+Step 20/25 : RUN useradd -u 1000 -m -r judge0 &&     echo "judge0 ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers &&     chown judge0: /api/tmp/
+ ---> Running in 855aaa05226f
+[91museradd warning: judge0's uid 1000 is greater than SYS_UID_MAX 999
+[0m ---> Removed intermediate container 855aaa05226f
+ ---> 4e1a1b1d8a56
+Step 21/25 : USER judge0
+ ---> Running in e20c78e4db2d
+ ---> Removed intermediate container e20c78e4db2d
+ ---> d056603116f5
+Step 22/25 : ENV JUDGE0_VERSION "1.13.1"
+ ---> Running in e6462c0f623c
+ ---> Removed intermediate container e6462c0f623c
+ ---> 8739cd7a175f
+Step 23/25 : LABEL version=$JUDGE0_VERSION
+ ---> Running in 0a2c490b4ab4
+ ---> Removed intermediate container 0a2c490b4ab4
+ ---> 07b38b1e1b01
+Step 24/25 : FROM production AS development
+ ---> 07b38b1e1b01
+Step 25/25 : CMD ["sleep", "infinity"]
+ ---> Running in 1d7a316f5ee6
+ ---> Removed intermediate container 1d7a316f5ee6
+ ---> bb45d6551660
+Successfully built bb45d6551660
+Successfully tagged judge0/cust_judge0:1.13.1
