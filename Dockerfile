@@ -27,7 +27,7 @@ RUN apt-get update && \
       sudo \
       nodejs \
       npm && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
     echo "gem: --no-document" > /root/.gemrc && \
     gem install bundler:2.1.4 && \
     npm install -g --unsafe-perm aglio@2.3.0
