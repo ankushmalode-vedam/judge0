@@ -80,7 +80,8 @@
     is_archived: false,
     source_file: "main.cpp",
     #compile_cmd: "/usr/local/gcc-7.4.0/bin/g++ %s main.cpp",
-    run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-7.4.0/lib64 ./a.out"
+    #run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-7.4.0/lib64 ./a.out"
+    run_cmd: "./a.out"
   },
   # {
   #   id: 53,
@@ -135,7 +136,8 @@
     is_archived: false,
     source_file: "main.f90",
     #compile_cmd: "/usr/local/gcc-9.2.0/bin/gfortran %s main.f90",
-    run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-9.2.0/lib64 ./a.out"
+    #run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-9.2.0/lib64 ./a.out"
+    run_cmd: "./a.out"
   },
   {
     id: 60,
