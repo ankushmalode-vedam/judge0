@@ -41,29 +41,28 @@
   {
     id: 48,
     name: "C (GCC 14.2.0)",
-    compile_cmd: "gcc %s main.c",
-#    name: "C (GCC 7.4.0)",
     is_archived: false,
+    compile_cmd: "gcc %s main.c",
     source_file: "main.c",
-    #compile_cmd: "/usr/local/gcc-7.4.0/bin/gcc %s main.c",
+#    compile_cmd: "/usr/local/gcc-7.4.0/bin/gcc %s main.c",
     run_cmd: "./a.out"
   },
-  # {
-  #   id: 49,
-  #   name: "C (GCC 8.3.0)",
-  #   is_archived: false,
-  #   source_file: "main.c",
-  #   compile_cmd: "/usr/local/gcc-8.3.0/bin/gcc %s main.c",
-  #   run_cmd: "./a.out"
-  # },
-  # {
-  #   id: 50,
-  #   name: "C (GCC 9.2.0)",
-  #   is_archived: false,
-  #   source_file: "main.c",
-  #   compile_cmd: "/usr/local/gcc-9.2.0/bin/gcc %s main.c",
-  #   run_cmd: "./a.out"
-  # },
+#  {
+#    id: 49,
+#    name: "C (GCC 8.3.0)",
+#    is_archived: false,
+#    source_file: "main.c",
+#    compile_cmd: "/usr/local/gcc-8.3.0/bin/gcc %s main.c",
+#    run_cmd: "./a.out"
+#  },
+#  {
+#    id: 50,
+#    name: "C (GCC 9.2.0)",
+#    is_archived: false,
+#    source_file: "main.c",
+#    compile_cmd: "/usr/local/gcc-9.2.0/bin/gcc %s main.c",
+#    run_cmd: "./a.out"
+#  },
   {
     id: 51,
     name: "C# (Mono 6.6.0.161)",
@@ -74,30 +73,29 @@
   },
   {
     id: 52,
-    name: "C++ (GCC 14.2.0)",
-    compile_cmd: "g++ %s main.cpp",
-    #name: "C++ (GCC 7.4.0)",
+    name: "C++ (GCC GCC 14.2.0)",
+    compile_cmd: "gcc %s main.c",
     is_archived: false,
     source_file: "main.cpp",
-    #compile_cmd: "/usr/local/gcc-7.4.0/bin/g++ %s main.cpp",
+#    compile_cmd: "/usr/local/gcc-7.4.0/bin/g++ %s main.cpp",
     run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-7.4.0/lib64 ./a.out"
   },
-  # {
-  #   id: 53,
-  #   name: "C++ (GCC 8.3.0)",
-  #   is_archived: false,
-  #   source_file: "main.cpp",
-  #   compile_cmd: "/usr/local/gcc-8.3.0/bin/g++ %s main.cpp",
-  #   run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-8.3.0/lib64 ./a.out"
-  # },
-  # {
-  #   id: 54,
-  #   name: "C++ (GCC 9.2.0)",
-  #   is_archived: false,
-  #   source_file: "main.cpp",
-  #   compile_cmd: "/usr/local/gcc-9.2.0/bin/g++ %s main.cpp",
-  #   run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-9.2.0/lib64 ./a.out"
-  # },
+#  {
+#    id: 53,
+#    name: "C++ (GCC 8.3.0)",
+#    is_archived: false,
+#    source_file: "main.cpp",
+#    compile_cmd: "/usr/local/gcc-8.3.0/bin/g++ %s main.cpp",
+#    run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-8.3.0/lib64 ./a.out"
+#  },
+#  {
+#    id: 54,
+#    name: "C++ (GCC 9.2.0)",
+#    is_archived: false,
+#    source_file: "main.cpp",
+#    compile_cmd: "/usr/local/gcc-9.2.0/bin/g++ %s main.cpp",
+#    run_cmd: "LD_LIBRARY_PATH=/usr/local/gcc-9.2.0/lib64 ./a.out"
+#  },
   {
     id: 55,
     name: "Common Lisp (SBCL 2.0.0)",
@@ -214,21 +212,20 @@
     compile_cmd: "PATH=\"/usr/local/gprolog-1.4.5/gprolog-1.4.5/bin:$PATH\" /usr/local/gprolog-1.4.5/gprolog-1.4.5/bin/gplc --no-top-level %s main.pro",
     run_cmd: "./main"
   },
-  # {
-  #   id: 70,
-  #   name: "Python (2.7.17)",
-  #   is_archived: false,
-  #   source_file: "script.py",
-  #   run_cmd: "/usr/local/python-2.7.17/bin/python2 script.py"
-  # },
+ # {
+ #   id: 70,
+ #   name: "Python (2.7.17)",
+ #   is_archived: false,
+ #   source_file: "script.py",
+ #   run_cmd: "/usr/local/python-2.7.17/bin/python2 script.py"
+ # },
   {
     id: 71,
     name: "Python (3.13.5)",
-    run_cmd: "/usr/bin/python3 script.py"
-    #name: "Python (3.8.1)",
     is_archived: false,
     source_file: "script.py",
-    #run_cmd: "/usr/local/python-3.8.1/bin/python3 script.py"
+    run_cmd: "/usr/bin/python3 script.py
+#    run_cmd: "/usr/local/python-3.8.1/bin/python3 script.py"
   },
   {
     id: 72,
