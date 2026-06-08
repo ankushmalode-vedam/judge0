@@ -226,10 +226,10 @@
   {
     id: 71,
     name: "Python (3.13.5)",
-    run_cmd: "/usr/bin/python3 script.py"
+    run_cmd: "/usr/bin/python3 script.py",
     #name: "Python (3.8.1)",
     is_archived: false,
-    source_file: "script.py",
+    source_file: "script.py"
     #run_cmd: "/usr/local/python-3.8.1/bin/python3 script.py"
   },
   {
@@ -270,7 +270,7 @@
     source_file: "main.c",
     compile_cmd: "clang %s main.c",
     run_cmd: "./a.out"
-  }
+  },
   # {
   #   id: 76,
   #   name: "C++ (Clang 7.0.1)",
@@ -286,7 +286,7 @@
     source_file: "main.cpp",
     compile_cmd: "clang++ %s main.cpp",
     run_cmd: "./a.out"
-  }
+  },
   {
     id: 77,
     name: "COBOL (GnuCOBOL 2.2)",
@@ -318,7 +318,7 @@
     source_file: "main.m",
     compile_cmd: "clang `gnustep-config --objc-flags | sed 's/-W[^ ]* //g'` `gnustep-config --base-libs | sed 's/-shared-libgcc//'` main.m %s",
     run_cmd: "./a.out"
-  }
+  },
   {
     id: 80,
     name: "R (4.0.0)",
@@ -365,7 +365,7 @@
     source_file: "Main.vb",
     compile_cmd: "/usr/bin/vbnc %s Main.vb",
     run_cmd: "/usr/bin/mono Main.exe"
-  }
+  },
   {
     id: 85,
     name: "Perl (5.28.1)",
