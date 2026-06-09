@@ -12,8 +12,9 @@ ENV JUDGE0_MAINTAINER "Herman Zvonimir Došilović <hermanz.dosilovic@gmail.com>
 LABEL maintainer=$JUDGE0_MAINTAINER
 
 #ENV PATH "/usr/local/ruby-2.7.0/bin:/opt/.gem/bin:$PATH"
-ENV PATH "/usr/local/ruby-3.3.8/bin:/opt/.gem/bin:$PATH"
+#ENV PATH "/usr/local/ruby-3.3.8/bin:/opt/.gem/bin:$PATH"
 ENV GEM_HOME "/opt/.gem/"
+ENV PATH "$GEM_HOME/bin:$PATH"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \

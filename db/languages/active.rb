@@ -177,7 +177,7 @@
   },
   {
     id: 63,
-    name: "JavaScript (Node.js 12.14.0)",
+    name: "JavaScript (Node.js 20.19.2)",
     is_archived: false,
     source_file: "script.js",
     run_cmd: "node script.js"
@@ -285,11 +285,13 @@
   },
   {
     id: 74,
-    name: "TypeScript (3.7.4)",
+    name: "TypeScript (6.0.3)",
     is_archived: false,
     source_file: "script.ts",
-    compile_cmd: "/usr/bin/tsc %s script.ts",
-    run_cmd: "/usr/local/node-12.14.0/bin/node script.js"
+    # compile_cmd: "/usr/bin/tsc %s script.ts",
+    compile_cmd: "tsc %s script.ts",
+    # run_cmd: "/usr/local/node-12.14.0/bin/node script.js"
+    run_cmd: "node script.js"
   },
   # {
   #   id: 75,
