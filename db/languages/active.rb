@@ -66,11 +66,13 @@
   # },
   {
     id: 51,
-    name: "C# (Mono 6.6.0.161)",
+    name: "C# (Mono 6.12.0.199)",
     is_archived: false,
     source_file: "Main.cs",
-    compile_cmd: "/usr/local/mono-6.6.0.161/bin/mcs %s Main.cs",
-    run_cmd: "/usr/local/mono-6.6.0.161/bin/mono Main.exe"
+    # compile_cmd: "/usr/local/mono-6.6.0.161/bin/mcs %s Main.cs",
+    compile_cmd: "mcs %s Main.cs"
+    # run_cmd: "/usr/local/mono-6.6.0.161/bin/mono Main.exe"
+    run_cmd: "mono Main.exe"
   },
   {
     id: 52,
@@ -141,27 +143,37 @@
   },
   {
     id: 60,
-    name: "Go (1.13.5)",
+    name: "Go (1.24.4)",
     is_archived: false,
     source_file: "main.go",
-    compile_cmd: "GOCACHE=/tmp/.cache/go-build /usr/local/go-1.13.5/bin/go build %s main.go",
+    # compile_cmd: "GOCACHE=/tmp/.cache/go-build /usr/local/go-1.13.5/bin/go build %s main.go",
+    compile_cmd: "GOCACHE=/tmp/.cache/go-build go build %s main.go"
     run_cmd: "./main"
   },
   {
     id: 61,
-    name: "Haskell (GHC 8.8.1)",
+    name: "Haskell (GHC 9.6.6)",
     is_archived: false,
     source_file: "main.hs",
-    compile_cmd: "/usr/local/ghc-8.8.1/bin/ghc %s main.hs",
+    # compile_cmd: "/usr/local/ghc-8.8.1/bin/ghc %s main.hs",
+    compile_cmd: "ghc %s main.hs"
     run_cmd: "./main"
   },
+#   {
+#     id: 62,
+#     name: "Java (OpenJDK 13.0.1)",
+#     is_archived: false,
+#     source_file: "Main.java",
+#     compile_cmd: "/usr/local/openjdk13/bin/javac %s Main.java",
+#     run_cmd: "/usr/local/openjdk13/bin/java Main"
+#   },
   {
     id: 62,
-    name: "Java (OpenJDK 13.0.1)",
+    name: "Java (OpenJDK 25)",
     is_archived: false,
     source_file: "Main.java",
-    compile_cmd: "/usr/local/openjdk13/bin/javac %s Main.java",
-    run_cmd: "/usr/local/openjdk13/bin/java Main"
+    compile_cmd: "/usr/bin/javac %s Main.java",
+    run_cmd: "/usr/bin/java Main"
   },
   {
     id: 63,
@@ -186,27 +198,43 @@
     compile_cmd: "/usr/local/ocaml-4.09.0/bin/ocamlc %s main.ml",
     run_cmd: "./a.out"
   },
+#   {
+#     id: 66,
+#     name: "Octave (5.1.0)",
+#     is_archived: false,
+#     source_file: "script.m",
+#     run_cmd: "/usr/local/octave-5.1.0/bin/octave-cli -q --no-gui --no-history script.m"
+#   },
   {
     id: 66,
-    name: "Octave (5.1.0)",
+    name: "Octave (6.4.0)",
     is_archived: false,
     source_file: "script.m",
-    run_cmd: "/usr/local/octave-5.1.0/bin/octave-cli -q --no-gui --no-history script.m"
+    run_cmd: "octave-cli -q --no-gui --no-history script.m"
   },
+#   {
+#     id: 67,
+#     name: "Pascal (FPC 3.0.4)",
+#     is_archived: false,
+#     source_file: "main.pas",
+#     compile_cmd: "/usr/local/fpc-3.0.4/bin/fpc %s main.pas",
+#     run_cmd: "./main"
+#   },
   {
     id: 67,
-    name: "Pascal (FPC 3.0.4)",
+    name: "Free Pascal (3.2.2)",
     is_archived: false,
     source_file: "main.pas",
-    compile_cmd: "/usr/local/fpc-3.0.4/bin/fpc %s main.pas",
+    compile_cmd: "fpc %s main.pas"
     run_cmd: "./main"
   },
   {
     id: 68,
-    name: "PHP (7.4.1)",
+    name: "PHP (8.4.21)",
     is_archived: false,
     source_file: "script.php",
-    run_cmd: "/usr/local/php-7.4.1/bin/php script.php"
+    # run_cmd: "/usr/local/php-7.4.1/bin/php script.php"
+    run_cmd: "php script.php"
   },
   {
     id: 69,
@@ -232,19 +260,27 @@
     run_cmd: "/usr/bin/python3 script.py"
     #run_cmd: "/usr/local/python-3.8.1/bin/python3 script.py"
   },
+#   {
+#     id: 72,
+#     name: "Ruby (2.7.0)",
+#     is_archived: false,
+#     source_file: "script.rb",
+#     run_cmd: "/usr/local/ruby-2.7.0/bin/ruby script.rb"
+#   },
   {
     id: 72,
-    name: "Ruby (2.7.0)",
+    name: "Ruby (3.3.8)",
     is_archived: false,
     source_file: "script.rb",
-    run_cmd: "/usr/local/ruby-2.7.0/bin/ruby script.rb"
+    run_cmd: "ruby script.rb"
   },
   {
     id: 73,
-    name: "Rust (1.40.0)",
+    name: "Rust (1.85.0)",
     is_archived: false,
     source_file: "main.rs",
-    compile_cmd: "/usr/local/rust-1.40.0/bin/rustc %s main.rs",
+    # compile_cmd: "/usr/local/rust-1.40.0/bin/rustc %s main.rs",
+    compile_cmd: "rustc %s main.rs"
     run_cmd: "./main"
   },
   {
@@ -298,7 +334,7 @@
   {
     id: 78,
     name: "Kotlin (1.3.70)",
-    is_archived: false,
+    is_archived: true,
     source_file: "Main.kt",
     compile_cmd: "/usr/local/kotlin-1.3.70/bin/kotlinc %s Main.kt",
     run_cmd: "/usr/local/kotlin-1.3.70/bin/kotlin MainKt"
@@ -324,7 +360,8 @@
     name: "R (4.0.0)",
     is_archived: false,
     source_file: "script.r",
-    run_cmd: "/usr/local/r-4.0.0/bin/Rscript script.r"
+    # run_cmd: "/usr/local/r-4.0.0/bin/Rscript script.r"
+    run_cmd: "Rscript script.r"
   },
   {
     id: 81,
@@ -392,7 +429,8 @@
     name: "Groovy (3.0.3)",
     is_archived: false,
     source_file: "script.groovy",
-    compile_cmd: "/usr/local/groovy-3.0.3/bin/groovyc %s script.groovy",
+    # compile_cmd: "/usr/local/groovy-3.0.3/bin/groovyc %s script.groovy",
+    compile_cmd: "groovyc %s script.groovy",
     run_cmd: "/usr/local/bin/java -cp \".:/usr/local/groovy-3.0.3/lib/*\" script"
   },
   {
