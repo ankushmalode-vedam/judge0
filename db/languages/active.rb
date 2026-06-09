@@ -42,7 +42,6 @@
     id: 48,
     name: "C (GCC 14.2.0)",
     compile_cmd: "gcc %s main.c",
-#    name: "C (GCC 7.4.0)",
     is_archived: false,
     source_file: "main.c",
     #compile_cmd: "/usr/local/gcc-7.4.0/bin/gcc %s main.c",
@@ -70,7 +69,7 @@
     is_archived: false,
     source_file: "Main.cs",
     # compile_cmd: "/usr/local/mono-6.6.0.161/bin/mcs %s Main.cs",
-    compile_cmd: "mcs %s Main.cs"
+    compile_cmd: "mcs %s Main.cs",
     # run_cmd: "/usr/local/mono-6.6.0.161/bin/mono Main.exe"
     run_cmd: "mono Main.exe"
   },
@@ -78,7 +77,6 @@
     id: 52,
     name: "C++ (GCC 14.2.0)",
     compile_cmd: "g++ %s main.cpp",
-    #name: "C++ (GCC 7.4.0)",
     is_archived: false,
     source_file: "main.cpp",
     #compile_cmd: "/usr/local/gcc-7.4.0/bin/g++ %s main.cpp",
@@ -172,15 +170,18 @@
     name: "Java (OpenJDK 25)",
     is_archived: false,
     source_file: "Main.java",
-    compile_cmd: "/usr/bin/javac %s Main.java",
-    run_cmd: "/usr/bin/java Main"
+    # compile_cmd: "/usr/bin/javac %s Main.java",
+    compile_cmd: "javac %s Main.java",
+    # run_cmd: "/usr/bin/java Main"
+    run_cmd: "java Main"
   },
   {
     id: 63,
     name: "JavaScript (Node.js 12.14.0)",
     is_archived: false,
     source_file: "script.js",
-    run_cmd: "/usr/local/node-12.14.0/bin/node script.js"
+    run_cmd: "node script.js"
+    # run_cmd: "/usr/local/node-12.14.0/bin/node script.js"
   },
   {
     id: 64,
@@ -254,7 +255,6 @@
   {
     id: 71,
     name: "Python (3.13.5)",
-    #name: "Python (3.8.1)",
     is_archived: false,
     source_file: "script.py",
     run_cmd: "/usr/bin/python3 script.py"
