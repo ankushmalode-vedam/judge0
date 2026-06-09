@@ -2,50 +2,50 @@ DEPRECATED: The legacy builder is deprecated and will be removed in a future rel
             Install the buildx component to build images with BuildKit:
             https://docs.docker.com/go/buildx/
 
-Sending build context to Docker daemon  3.156MB
+Sending build context to Docker daemon  3.146MB
 Step 1/25 : FROM ankushvedam/judge0-compilers:8-6-2026 AS production
  ---> d1babf904c53
 Step 2/25 : ENV JUDGE0_HOMEPAGE "https://judge0.com"
- ---> Running in f9a73239120c
- ---> Removed intermediate container f9a73239120c
- ---> 833aa3318b24
+ ---> Running in 08f65a9ac9eb
+ ---> Removed intermediate container 08f65a9ac9eb
+ ---> 7cbaf6bea203
 Step 3/25 : LABEL homepage=$JUDGE0_HOMEPAGE
- ---> Running in 6e70b9962f42
- ---> Removed intermediate container 6e70b9962f42
- ---> c1aaaa04187a
+ ---> Running in ac306b5a4e1c
+ ---> Removed intermediate container ac306b5a4e1c
+ ---> 4f5898b9f4c0
 Step 4/25 : ENV JUDGE0_SOURCE_CODE "https://github.com/judge0/judge0"
- ---> Running in 6f1ee57b2da3
- ---> Removed intermediate container 6f1ee57b2da3
- ---> 417c824d6fa4
+ ---> Running in 5401a68f4d30
+ ---> Removed intermediate container 5401a68f4d30
+ ---> 49d39f4d1f1e
 Step 5/25 : LABEL source_code=$JUDGE0_SOURCE_CODE
- ---> Running in e6e67c1db48d
- ---> Removed intermediate container e6e67c1db48d
- ---> 5e4cd497c5d8
+ ---> Running in 56f00f942dcd
+ ---> Removed intermediate container 56f00f942dcd
+ ---> 4859817fa748
 Step 6/25 : ENV JUDGE0_MAINTAINER "Herman Zvonimir Došilović <hermanz.dosilovic@gmail.com>"
- ---> Running in 52f0f4c01a9d
- ---> Removed intermediate container 52f0f4c01a9d
- ---> 85ec3b7f9a53
+ ---> Running in 0fa64e2e3151
+ ---> Removed intermediate container 0fa64e2e3151
+ ---> 49c3ba9c4519
 Step 7/25 : LABEL maintainer=$JUDGE0_MAINTAINER
- ---> Running in 9c8880522318
- ---> Removed intermediate container 9c8880522318
- ---> e1508fe2ff1b
+ ---> Running in ef61e9e61586
+ ---> Removed intermediate container ef61e9e61586
+ ---> a5cdb6fbcc49
 Step 8/25 : ENV GEM_HOME "/opt/.gem/"
- ---> Running in 29beedaef883
- ---> Removed intermediate container 29beedaef883
- ---> ad29a64f1485
+ ---> Running in 3c14be435186
+ ---> Removed intermediate container 3c14be435186
+ ---> 5465ef6b2f93
 Step 9/25 : ENV PATH "$GEM_HOME/bin:$PATH"
- ---> Running in ccb9dc706a51
- ---> Removed intermediate container ccb9dc706a51
- ---> efd131b0ad32
+ ---> Running in 86dd8098f975
+ ---> Removed intermediate container 86dd8098f975
+ ---> 285fc1e3992b
 Step 10/25 : RUN apt-get update &&     apt-get install -y --no-install-recommends       cron       libpq-dev       sudo       nodejs       npm &&     echo "gem: --no-document" > /root/.gemrc &&     gem install bundler:2.1.4 &&     npm install -g --unsafe-perm aglio@2.3.0 &&     rm -rf /var/lib/apt/lists/*
- ---> Running in f6c2cd06cc7f
+ ---> Running in ae2740a3b7dd
 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9,671 kB]
 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5,412 B]
 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [207 kB]
-Fetched 10.1 MB in 2s (5,490 kB/s)
+Fetched 10.1 MB in 1s (7,481 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -68,15 +68,15 @@ Get:1 http://deb.debian.org/debian trixie/main amd64 cron-daemon-common all 3.0p
 Get:2 http://deb.debian.org/debian trixie/main amd64 cron amd64 3.0pl1-197 [87.4 kB]
 Get:3 http://deb.debian.org/debian trixie/main amd64 sudo amd64 1.9.16p2-3+deb13u2 [2,086 kB]
 [91mdebconf: unable to initialize frontend: Dialog
-[0m[91mdebconf: (TERM is not set, so the dialog frontend is not usable.)
-[0m[91mdebconf: falling back to frontend: Readline
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
 [0m[91mdebconf: unable to initialize frontend: Readline
 [0m[91mdebconf: (This frontend requires a controlling tty.)
-[0m[91mdebconf: falling back to frontend: Teletype
+debconf: falling back to frontend: Teletype
 [0m[91mdebconf: unable to initialize frontend: Teletype
 [0m[91mdebconf: (This frontend requires a controlling tty.)
 [0m[91mdebconf: falling back to frontend: Noninteractive
-[0mFetched 2,192 kB in 0s (50.3 MB/s)
+[0mFetched 2,192 kB in 0s (51.1 MB/s)
 Selecting previously unselected package cron-daemon-common.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 138690 files and directories currently installed.)
 Preparing to unpack .../cron-daemon-common_3.0pl1-197_all.deb ...
@@ -101,46 +101,46 @@ Processing triggers for man-db (2.13.1-1) ...
 Processing triggers for libc-bin (2.41-12+deb13u3) ...
 Successfully installed bundler-2.1.4
 1 gem installed
-[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
-[0m[91mnpm[0m[91m WARN[0m[91m deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+[91mnpm[0m[91m WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
 [0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m json3@3.3.2: Please use the native JSON object instead of JSON 3
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m deprecated cryptiles@2.0.5: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m deprecated transformers@2.1.0: Deprecated, use jstransformer
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m boom@2.10.1: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m glob@3.2.11: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m constantinople@3.0.2: Please update to at least constantinople 3.1.1
-[0m[91mnpm WARN deprecated hoek@2.16.3: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated har-validator@4.2.1: this library is no longer supported
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m deprecated[0m[91m minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+[0m[91mnpm[0m[91m [0m[91mWARN [0m[91mdeprecated cryptiles@2.0.5: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
 [0m[91mnpm[0m[91m [0m[91mWARN deprecated sntp@1.0.9: This module moved to @hapi/sntp. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critical security issues.
-[0m[91mnpm[0m[91m [0m[91mWARN deprecated mkdirp@0.3.5: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
-[0m[91mnpm[0m[91m WARN deprecated request@2.81.0: request has been deprecated, see https://github.com/request/request/issues/3142
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m hawk@3.1.3: This module moved to @hapi/hawk. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critical security issues.
-[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m coffee-script@1.12.7: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
+[0m[91mnpm[0m[91m [0m[91mWARN deprecated transformers@2.1.0: Deprecated, use jstransformer
+[0m[91mnpm[0m[91m [0m[91mWARN deprecated[0m[91m boom@2.10.1: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
+[0m[91mnpm[0m[91m WARN deprecated glob@3.2.11: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+[0m[91mnpm[0m[91m WARN deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m constantinople@3.0.2: Please update to at least constantinople 3.1.1
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m deprecated hoek@2.16.3: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m deprecated har-validator@4.2.1: this library is no longer supported
+[0m[91mnpm[0m[91m WARN deprecated[0m[91m mkdirp@0.3.5: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+[0m[91mnpm[0m[91m [0m[91mWARN deprecated request@2.81.0: request has been deprecated, see https://github.com/request/request/issues/3142
+[0m[91mnpm[0m[91m [0m[91mWARN deprecated hawk@3.1.3: This module moved to @hapi/hawk. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critical security issues.
+[0m[91mnpm[0m[91m [0m[91mWARN deprecated coffee-script@1.12.7: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
 [0m[91mnpm[0m[91m [0m[91mWARN deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
-[0m[91mnpm[0m[91m [0m[91mWARN deprecated[0m[91m highlight.js@8.9.1: Version no longer supported. Upgrade to @latest
+[0m[91mnpm[0m[91m [0m[91mWARN deprecated highlight.js@8.9.1: Version no longer supported. Upgrade to @latest
 [0m
 added 431 packages in 3m
 
 15 packages are looking for funding
   run `npm fund` for details
- ---> Removed intermediate container f6c2cd06cc7f
- ---> 6bc906627bca
+ ---> Removed intermediate container ae2740a3b7dd
+ ---> 2b98a9da98c2
 Step 11/25 : EXPOSE 2358
- ---> Running in 08ae5da0d376
- ---> Removed intermediate container 08ae5da0d376
- ---> f4c3c8df2e81
+ ---> Running in 55b582a466f2
+ ---> Removed intermediate container 55b582a466f2
+ ---> e35ef88427d1
 Step 12/25 : WORKDIR /api
- ---> Running in dbe1823aa6b4
- ---> Removed intermediate container dbe1823aa6b4
- ---> dd69df897613
+ ---> Running in b94778212715
+ ---> Removed intermediate container b94778212715
+ ---> 134a964a89fc
 Step 13/25 : COPY Gemfile* ./
- ---> bf1bca33532b
+ ---> b9cbf64d7c94
 Step 14/25 : RUN RAILS_ENV=production bundle
- ---> Running in 957e354b859f
+ ---> Running in c30f46348832
 [91mCalling `DidYouMean::SPELL_CHECKERS.merge!(error_name => spell_checker)' has been deprecated. Please call `DidYouMean.correct_error(error_name, spell_checker)' instead.
 [0m[91mDon't run Bundler as root. Bundler can ask for sudo if it is needed, and
 installing your bundle as root will break this application for all non-root
@@ -151,9 +151,9 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
@@ -196,6 +196,8 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
@@ -220,21 +222,7 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
@@ -255,6 +243,8 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
@@ -324,8 +314,6 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
-NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
-Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
@@ -347,6 +335,18 @@ Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.r
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+[0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
+Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
+NOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
 [0m[91mNOTE: Gem::Platform.match is deprecated; use Gem::Platform.match_spec? or match_gem? instead. It will be removed in Rubygems 4
 Gem::Platform.match called from /opt/.gem/gems/bundler-2.1.4/lib/bundler/index.rb:198.
@@ -533,46 +533,46 @@ Bundle complete! 15 Gemfile dependencies, 83 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
 Post-install message from httparty:
 When you HTTParty, you must party hard!
- ---> Removed intermediate container 957e354b859f
- ---> d87a1ef9819b
+ ---> Removed intermediate container c30f46348832
+ ---> c835619b72d4
 Step 15/25 : COPY cron /etc/cron.d
- ---> c020e8960013
+ ---> 6b2ebbb6aa06
 Step 16/25 : RUN cat /etc/cron.d/* | crontab -
- ---> Running in 1094a630f281
- ---> Removed intermediate container 1094a630f281
- ---> ff43ef3b244b
+ ---> Running in 942a30c10e6e
+ ---> Removed intermediate container 942a30c10e6e
+ ---> 984c8e284ff5
 Step 17/25 : COPY . .
- ---> 0e3b6b46bd87
+ ---> c4b3fdbf9786
 Step 18/25 : ENTRYPOINT ["/api/docker-entrypoint.sh"]
- ---> Running in c9eab7434d29
- ---> Removed intermediate container c9eab7434d29
- ---> 446450c0bb29
+ ---> Running in cbbb8e2ed693
+ ---> Removed intermediate container cbbb8e2ed693
+ ---> f124894dfefb
 Step 19/25 : CMD ["/api/scripts/server"]
- ---> Running in 6f946b85ceaa
- ---> Removed intermediate container 6f946b85ceaa
- ---> 80f01da9109a
+ ---> Running in cafdaa411bd6
+ ---> Removed intermediate container cafdaa411bd6
+ ---> 9c3fc92b6643
 Step 20/25 : RUN useradd -u 1000 -m -r judge0 &&     echo "judge0 ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers &&     chown judge0: /api/tmp/
- ---> Running in 3ef26ca93da1
+ ---> Running in 529990345ff3
 [91museradd warning: judge0's uid 1000 is greater than SYS_UID_MAX 999
-[0m ---> Removed intermediate container 3ef26ca93da1
- ---> 9467f918d0b0
+[0m ---> Removed intermediate container 529990345ff3
+ ---> 85ad87c17a3f
 Step 21/25 : USER judge0
- ---> Running in dd53ec44df9a
- ---> Removed intermediate container dd53ec44df9a
- ---> b5b55d233c52
+ ---> Running in b5a050b8dbbc
+ ---> Removed intermediate container b5a050b8dbbc
+ ---> b5ded22e320d
 Step 22/25 : ENV JUDGE0_VERSION "1.13.1"
- ---> Running in 5de6215a7f7a
- ---> Removed intermediate container 5de6215a7f7a
- ---> 224d90e55249
+ ---> Running in feba65d78c74
+ ---> Removed intermediate container feba65d78c74
+ ---> 11528c409343
 Step 23/25 : LABEL version=$JUDGE0_VERSION
- ---> Running in 2ac6f1cd88eb
- ---> Removed intermediate container 2ac6f1cd88eb
- ---> d96050271f2c
+ ---> Running in dbaeb592c1e2
+ ---> Removed intermediate container dbaeb592c1e2
+ ---> 1ff4223da470
 Step 24/25 : FROM production AS development
- ---> d96050271f2c
+ ---> 1ff4223da470
 Step 25/25 : CMD ["sleep", "infinity"]
- ---> Running in 3af1976d283c
- ---> Removed intermediate container 3af1976d283c
- ---> e3bb629d7437
-Successfully built e3bb629d7437
+ ---> Running in 6bf92a48e2ca
+ ---> Removed intermediate container 6bf92a48e2ca
+ ---> 56608d817541
+Successfully built 56608d817541
 Successfully tagged judge0/cust_judge0:9-06-2026

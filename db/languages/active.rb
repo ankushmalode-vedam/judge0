@@ -145,7 +145,7 @@
     is_archived: false,
     source_file: "main.go",
     # compile_cmd: "GOCACHE=/tmp/.cache/go-build /usr/local/go-1.13.5/bin/go build %s main.go",
-    compile_cmd: "GOCACHE=/tmp/.cache/go-build go build %s main.go"
+    compile_cmd: "GOCACHE=/tmp/.cache/go-build go build %s main.go",
     run_cmd: "./main"
   },
   {
@@ -154,7 +154,7 @@
     is_archived: false,
     source_file: "main.hs",
     # compile_cmd: "/usr/local/ghc-8.8.1/bin/ghc %s main.hs",
-    compile_cmd: "ghc %s main.hs"
+    compile_cmd: "ghc %s main.hs",
     run_cmd: "./main"
   },
 #   {
@@ -226,7 +226,7 @@
     name: "Free Pascal (3.2.2)",
     is_archived: false,
     source_file: "main.pas",
-    compile_cmd: "fpc %s main.pas"
+    compile_cmd: "fpc %s main.pas",
     run_cmd: "./main"
   },
   {
@@ -280,7 +280,7 @@
     is_archived: false,
     source_file: "main.rs",
     # compile_cmd: "/usr/local/rust-1.40.0/bin/rustc %s main.rs",
-    compile_cmd: "rustc %s main.rs"
+    compile_cmd: "rustc %s main.rs",
     run_cmd: "./main"
   },
   {
