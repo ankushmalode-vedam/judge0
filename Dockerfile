@@ -1,5 +1,5 @@
-.#FROM judge0/compilers:1.4.0 AS production
-FROM judge0/compilers:3-6-2026 AS production
+#FROM judge0/compilers:1.4.0 AS production
+#FROM judge0/compilers:3-6-2026 AS production
 FROM ankushvedam/judge0-compilers:8-6-2026 AS production
 
 ENV JUDGE0_HOMEPAGE "https://judge0.com"
