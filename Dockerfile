@@ -1,5 +1,5 @@
 #FROM judge0/compilers:1.4.0 AS production
-FROM ankushvedam/judge0-compilers:fdc011ec48ccac8a609730d526888e620dd8c89e AS production
+FROM ankushvedam/judge0-compilers:929337457fed1364286400b1e33e8dde5392f842 AS production
 
 ENV JUDGE0_HOMEPAGE "https://judge0.com"
 LABEL homepage=$JUDGE0_HOMEPAGE
@@ -36,7 +36,8 @@ EXPOSE 2358
 WORKDIR /api
 
 COPY Gemfile* ./
-RUN RAILS_ENV=production bundle
+RUN RAILS_ENV=production bundle _2.1.4_
+#RUN RAILS_ENV=production bundle
 
 COPY cron /etc/cron.d
 RUN cat /etc/cron.d/* | crontab -
