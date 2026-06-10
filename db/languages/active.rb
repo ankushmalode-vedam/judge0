@@ -269,7 +269,7 @@
 #   },
   {
     id: 72,
-    name: "Ruby (3.3.8)",
+    name: "Ruby (2.7.0)",
     is_archived: false,
     source_file: "script.rb",
     run_cmd: "ruby script.rb"

@@ -1,6 +1,5 @@
 #FROM judge0/compilers:1.4.0 AS production
-#FROM judge0/compilers:3-6-2026 AS production
-FROM ankushvedam/judge0-compilers:8-6-2026 AS production
+FROM ankushvedam/judge0-compilers:fdc011ec48ccac8a609730d526888e620dd8c89e AS production
 
 ENV JUDGE0_HOMEPAGE "https://judge0.com"
 LABEL homepage=$JUDGE0_HOMEPAGE
@@ -14,7 +13,7 @@ LABEL maintainer=$JUDGE0_MAINTAINER
 #ENV PATH "/usr/local/ruby-2.7.0/bin:/opt/.gem/bin:$PATH"
 #ENV PATH "/usr/local/ruby-3.3.8/bin:/opt/.gem/bin:$PATH"
 ENV GEM_HOME "/opt/.gem/"
-ENV PATH "$GEM_HOME/bin:$PATH"
+ENV PATH "/usr/local/ruby-2.7.0/bin:$GEM_HOME/bin:$PATH"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -27,6 +26,10 @@ RUN apt-get update && \
     gem install bundler:2.1.4 && \
     npm install -g --unsafe-perm aglio@2.3.0 && \
     rm -rf /var/lib/apt/lists/*
+
+RUN ruby -v && \
+    gem -v && \
+    bundle _2.1.4_ --version
 
 EXPOSE 2358
 
