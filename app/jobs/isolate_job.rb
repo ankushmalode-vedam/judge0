@@ -52,7 +52,7 @@ class IsolateJob < ApplicationJob
   private
 
   def initialize_workdir
-    @box_id = submission.id%2147483647
+    @box_id = submission.id%65535
     @cgroups = (!submission.enable_per_process_and_thread_time_limit || !submission.enable_per_process_and_thread_memory_limit) ? "--cg" : ""
     @workdir = `isolate #{cgroups} -b #{box_id} --init`.chomp
     @boxdir = workdir + "/box"
